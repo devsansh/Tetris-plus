@@ -34,7 +34,7 @@ class Board{
 
     private:
 
-    enum {POS_FREE,POSS_FILLED}; //FREE = free position on board and FILLED = filled space on board.
+    enum {POS_FREE,POS_FILLED}; //FREE = free position on board and FILLED = filled space on board.
     int mBoard [BOARD_WIDTH][BOARD_HEIGHT];
     Pieces* mPieces;
     int mScreenHeight;

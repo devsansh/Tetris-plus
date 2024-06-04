@@ -31,3 +31,24 @@ void Board::StorePiece(int pX, int pY, int pPiece, int pRotation){
         }
     }
 }
+//IsGAmeOver checks if board is filled till first row, if yes then game is over.
+
+bool Board::IsGameOver(){
+    for(int i = 0; i < BOARD_WIDTH;i++){
+        if(mBoard[i][0] == POS_FILLED){
+            return true;
+        }return false;
+    }
+}
+
+//DeleteLine is a method that erase a line and move upper blocks down
+
+void Board::DeleteLine(int pY){
+    for(int j = pY; j > 0;j--){
+        for(int i = 0; i < BOARD_WIDTH;i++){
+            mBoard[i][j] = mBoard[i][j-1];
+
+        }
+    }
+
+}

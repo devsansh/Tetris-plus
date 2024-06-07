@@ -52,3 +52,36 @@ void Board::DeleteLine(int pY){
     }
 
 }
+
+void Board::DeletePossibleLines(){
+    for(int j = 0;j < BOARD_HEIGHT; j++){
+        int i = 0;
+        while (i < BOARD_WIDTH){
+            if (mBoard[i][j] != POS_FILLED){
+                break;
+            }
+            i++;
+        }
+        if(i == BOARD_WIDTH)
+        {
+            DeleteLine(j);
+        }
+        
+    }
+}
+
+bool Board::IsFreeBlock(int pX, int pY){
+    if(mBoard[pX][pY] == POS_FREE){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+int Board::GetXPosInPixels(int pPos){
+    return (( BOARD_POSITION -( BLOCK_SIZE * (BOARD_WIDTH/2 ))) + (pPos* BLOCK_SIZE));
+}
+
+int Board::GetYPosInPixels(int pPos){
+    return ( (mScreenHeight – (BLOCK_SIZE * BOARD_HEIGHT)) + (pPos * BLOCK_SIZE) );
+}

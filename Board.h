@@ -6,7 +6,7 @@
 
 // *****---Defines---*****
 #define BOARD_LINE_WIDTH 6 //Width of each of 2 lines that delimit the board.
-#define BOARD_SIZE 16 // Width and Height of each block of a piece.
+#define BLOCK_SIZE 16 // Width and Height of each block of a piece.
 #define BOARD_POSITION 320 // Center position of the board from the left of the screen.
 #define BOARD_WIDTH 10 // Board width in Blocks.
 #define BOARD_HEIGHT 10 // Board height in Blocks.
